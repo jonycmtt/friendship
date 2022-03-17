@@ -11,7 +11,7 @@ if(name2.length<=2) {
     alert("Inter at least 3 character")
 } else {
     var random = Math.floor(Math.random()*100);
-    document.getElementById("print").innerHTML = "Congratulation " +"'" + name1 + "'" + " and " + "'" + name2 + "'" + " = " + "'"  +random + "'" + " %" +" of love";
+    document.getElementById("print").innerHTML = "Congratulation " +"'" + name1 + "'" + " and " + "'" + name2 + "'" + " = " + "'"  +random + "'" + " %" +" of Friendship";
 }
     if (random<=10 || random<=20) {
         document.getElementById("statement").innerHTML = "Need Extra Care";

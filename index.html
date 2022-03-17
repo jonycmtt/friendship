@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship calculators</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="author" >
+        <img src="img/1.jpg" alt="">
+        <!-- <small>Md. Jony Islam</small> -->
+
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Friendship calculator</h1>
+            <div class="inputarea">
+                <input type="text" placeholder="Your Name" id="NameOne" onfocus="this.value = ''">
+                <input type="text" placeholder="Your Lover" id="NameTwo" onfocus="this.value = ''">
+            </div>
+            <a href="#" onclick="love()">calculate <i class="fa fa-heart"></i></a>
+            <p id="print">Your Friendship Result is here... <i class="fa fa-heart"></i> </p>
+            <div id="statement"></div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>

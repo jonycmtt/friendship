@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: pink;
+    font-family: 'Ubuntu', sans-serif;
+    transition: 0.5s all ease;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.heart{
+    width: 100%;
+    height: 100%;
+    left: 10%;
+    top: 50%;
+    position: absolute;
+    font-size: 100px;
+    z-index: -1;
+    color: #d7385c;
+    animation: myAnim 2s ease 1s infinite ;
+}
+
+.content {
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: inset -8px -8px 12px rgb(185,103,117),inset 8px 8px 12px rgb(201,95,114);
+    border-radius: 30px;
+    animation: round 1s ease 0s 1 normal forwards;
+}
+@keyframes round {
+    0% {
+      opacity: 0;
+      transform: rotate(-540deg) scale(0);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+  }
+.content h1 {
+    text-transform: uppercase;
+    /* text-align: center */
+    color: #d7385c;
+
+}
+.inputarea {
+    display: flex;
+    margin-top: 20px;
+}
+.inputarea input {
+    width: 200px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    outline: none;
+    border: 2px solid #d7385c;
+    padding: 20px 40px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+::placeholder {
+    font-size: 18px;
+}
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background: #d7385c;
+    padding:15px 30px;
+    color: #fff;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.5s all ease;
+    overflow: hidden;
+    position: relative;
+}
+a .fa {
+    font-size: 20px;
+    margin: 0 10px;
+    transition: 0.5s all ease;
+    display: none;
+   
+}
+a:focus .fa {
+    display: block;
+     animation: myAnim 2s ease infinite forwards;
+}
+#print {
+    background: #d7385c;
+    padding: 20px 50px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+    overflow: hidden;
+}
+#print .fa {
+    animation: myAnim 2s ease  infinite  forwards;
+    font-size: 30px;
+}
+#statement {
+    margin: 30px 0;
+    /* background: #000; */
+    /* padding: 30px 60px; */
+    color: #d7385c;
+    font-size: 30px;
+    /* background: #d7385c; */
+    /* transform: scale(0,0); */
+    animation: shake 2s ease infinite forwards;
+    
+ 
+}
+@keyframes shake {
+    0% {
+      animation-timing-function: ease-out;
+      transform: scale(1);
+      transform-origin: center center;
+    }
+  
+    10% {
+      animation-timing-function: ease-in;
+      transform: scale(0.91);
+    }
+  
+    17% {
+      animation-timing-function: ease-out;
+      transform: scale(0.98);
+    }
+  
+    33% {
+      animation-timing-function: ease-in;
+      transform: scale(0.87);
+    }
+  
+    45% {
+      animation-timing-function: ease-out;
+      transform: scale(1);
+    }
+  }
+
+@keyframes myAnim {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 1;
+      transform: translateY(-45px);
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    40% {
+      animation-timing-function: ease-in;
+      transform: translateY(-24px);
+    }
+  
+    65% {
+      animation-timing-function: ease-in;
+      transform: translateY(-12px);
+    }
+  
+    82% {
+      animation-timing-function: ease-in;
+      transform: translateY(-6px);
+    }
+  
+    93% {
+      animation-timing-function: ease-in;
+      transform: translateY(-4px);
+    }
+  
+    25%,
+    55%,
+    75%,
+    87% {
+      animation-timing-function: ease-out;
+      transform: translateY(0px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @media screen and (max-width:992px) {
+      .container {
+          /* align-items: flex-start;
+          padding-top: 30px; */
+      }
+    .content {
+        width: 90%;
+        height: 64%;
+    }
+  }
+  @media screen and (max-width:768px) {
+      .container {
+          align-items: flex-start;
+          padding-top: 30px;
+      }
+      #print {
+        font-size: 16px;
+        margin: 0 30px;
+    }
+  }
+  @media screen and (max-width:576px) {
+    .inputarea {
+        flex-wrap: wrap;
+    }
+    .inputarea input {
+        width: 100%;
+        margin: 10px 30px;
+    }
+    #statement {
+        font-size: 20px;
+
+    }
+    .content h1 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+  }
+  .author {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #d7385c;
+      border-radius: 50%;
+      position: absolute;
+      right: 5%;
+      top: 5%;
+  }
+  .author img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      /* margin-left: 2px; */
+      
+  }
